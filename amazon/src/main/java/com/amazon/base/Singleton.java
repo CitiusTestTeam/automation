@@ -4,6 +4,8 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.Parameters;
 
 import com.amazon.config.Config;
 import com.amazon.config.TestConfig;
@@ -70,4 +72,13 @@ public class Singleton {
 		
 		driver.manage().timeouts().implicitlyWait(2000, TimeUnit.SECONDS);
 	}
+	
+    @AfterTest(alwaysRun = true)
+    private void cleanupAfterTest() {
+    	singletonInstance.cleanup();
+    }
+    
+    public void cleanup(){
+    	driver.quit();
+    }
 }
