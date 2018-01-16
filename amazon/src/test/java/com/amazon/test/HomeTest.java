@@ -2,7 +2,6 @@ package com.amazon.test;
 
 import com.amazon.base.Singleton;
 import com.amazon.home.Home;
-import com.amazon.home.Login;
 
 public class HomeTest {
 

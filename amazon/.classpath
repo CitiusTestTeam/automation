@@ -32,5 +32,6 @@
 	<classpathentry kind="lib" path="E:/rajat/Practice/libs/httpcore-4.4.6.jar"/>
 	<classpathentry kind="lib" path="E:/rajat/Practice/client-combined-3.8.1.jar"/>
 	<classpathentry kind="lib" path="E:/rajat/Practice/client-combined-3.8.1-sources.jar"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
