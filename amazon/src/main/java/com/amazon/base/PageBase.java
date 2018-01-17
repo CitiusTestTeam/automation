@@ -28,15 +28,7 @@ public class PageBase extends Utility{
 		
 		driver.get(Config.url);
 		
-		mouseHover(XPATH_HELLO_SIGN_IN);
-		
-		
-		boolean isvisible = isElementVisible(XPATH_SIGN_IN_BUTTON);
-		
-		System.out.println("final visibility of sign in button: "+isvisible);
-		clickOnSignInButton();
-		
-		
+		click(XPATH_HELLO_SIGN_IN);
 		
 		enterData(XPATH_EMAIL_OR_PHONE, userName);
 		

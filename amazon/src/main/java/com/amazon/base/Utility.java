@@ -1,5 +1,7 @@
 package com.amazon.base;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,6 +18,30 @@ public class Utility {
 		this.driver = driver;
 	}
 	
+	public void click(String element){
+		element(element).click();
+	}
+	
+	public void enterData(String element, String data){
+		element(element).sendKeys(data);
+	}
+	
+	public WebElement element(String element){
+		return driver.findElement(By.xpath(element));
+	}
+	
+	public List<WebElement> elements(String element){
+		return driver.findElements(By.xpath(element));
+	}
+	
+	public String getNewWindow(){
+		return driver.getWindowHandle();
+	}
+	
+	public String getText(String element){
+		return element(element).getText();
+	}
+	
 	public void mouseHover(String mouseHoverElement){
 		Actions action = new Actions(driver);
 		WebElement element = driver.findElement(By.xpath(mouseHoverElement));
@@ -28,13 +54,5 @@ public class Utility {
 		action.moveToElement(signInElement).click().perform();
 		
 		//action.moveToElement(element).build().perform();
-	}
-	
-	public void click(String element){
-		driver.findElement(By.xpath(element)).click();
-	}
-	
-	public void enterData(String element, String data){
-		driver.findElement(By.xpath(element)).sendKeys(data);
 	}
 }
