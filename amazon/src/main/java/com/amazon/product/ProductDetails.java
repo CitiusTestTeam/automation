@@ -28,6 +28,7 @@ public class ProductDetails extends Utility{
 				 WebElement availableRamSizeElement = element(String.format(XPATH_SIZE, i));
 				 if(availableRamSizeElement.getText().equals(ramsize)){
 					 availableRamSizeElement.click();
+					 System.out.println("fd");
 				 }
 			 }
 		 }
